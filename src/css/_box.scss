@@ -1,0 +1,56 @@
+$boxsize: 50px;
+$childBorderBottomSize: 0px;
+$childHeightSize: $boxsize - $childBorderBottomSize;
+$offsetSize: 15px;
+
+
+.box {
+    width: $boxsize;
+    height: $boxsize;
+    border-radius: 7px;
+    background-color: $bluegray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box--hide {
+    opacity: 0.2;
+}
+
+.child-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background-color: $orange;
+    transition-timing-function: ease-out;
+    transition: 0.25s;
+    // border-bottom: solid $childBorderBottomSize $orangedark;
+}
+
+.child-box--dot {
+    width: 20% !important;
+    height: 20% !important;
+    border-radius: 50%;
+}
+
+.child-box--hide {
+    width: 0% !important;
+    height: 0% !important;
+    pointer-events: none !important;
+    // border-bottom: solid $childBorderBottomSize $orangedark;
+}
+
+.child-box--white {
+    animation: to-white 1s ease-in-out forwards;
+}
+
+@keyframes to-white {
+    from {
+        background-color: $orange;
+    }
+    to {
+        background-color: white;
+    }
+}

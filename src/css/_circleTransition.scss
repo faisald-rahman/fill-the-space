@@ -1,0 +1,50 @@
+@import "utility";
+
+.circle-transition {
+    @extend .absolute--center;
+    height: 0px;
+    width: 0px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.circle-transition--show {
+    animation-name: show;
+    animation-duration: .25s;
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    animation-fill-mode: forwards;
+}
+
+.circle-transition--hide {
+    animation-name: hide;
+    animation-duration: .25s;
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        width: 2000px;
+        height: 2000px;
+    }
+}
+
+@keyframes hide {
+    
+    0% {
+        width: 2000px;
+        height: 2000px;
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+

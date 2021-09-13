@@ -1,0 +1,38 @@
+@import "utility";
+@import "color";
+
+.congrat {
+    @extend .absolute--center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bluedark;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out; 
+
+    p, h1 {
+        text-align: center;
+    }
+
+    p {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .btn {
+        width: 150px;
+    }
+}
+
+.congrat--hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.congrat--show {
+    opacity: 1;
+}

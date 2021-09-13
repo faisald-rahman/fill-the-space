@@ -1,0 +1,20 @@
+@import "color";
+
+.btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: $redfine;
+    border-bottom: 2px solid $redfinedark;
+    color: white;
+    cursor: pointer;
+}
+
+.btn--disabled {
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+}
+
+.btn:hover {
+    background-color: $redfinedark !important;
+}
